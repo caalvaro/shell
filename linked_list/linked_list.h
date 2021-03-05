@@ -6,13 +6,14 @@
 
 typedef struct _LIST_NODE LIST_NODE;
 typedef struct _LIST_HEAD LIST_HEAD;
+typedef struct _Job Job;
 
-typedef struct job {
+struct _Job {
     pid_t pgid;
     int jid;
     char *command_line;
     char *status;
-} Job;
+};
 
 struct _LIST_NODE {
     Job *job;
